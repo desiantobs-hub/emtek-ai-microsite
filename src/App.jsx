@@ -482,12 +482,12 @@ export default function App() {
 
         <TopBadge />
 
-        <div className="fade-up text-left mb-6">
-          <h2 className="text-[2.2rem] font-black leading-tight tracking-tight">
-            <span className="text-navy-900">Brand Built-In,</span><br />
-            <span className="text-red-600">Reimagined</span>
+        <div className="fade-up mx-auto mb-8 max-w-[420px] text-center">
+          <h2 className="text-4xl font-extrabold leading-tight text-navy-900 sm:text-5xl">
+            Brand Built-In,<br />
+            <span className="block text-red-600">Reimagined</span>
           </h2>
-          <p className="text-navy-900 text-sm mt-3 leading-relaxed font-medium">
+          <p className="mx-auto mt-4 max-w-[420px] text-center text-base leading-relaxed text-navy-900">
             AI opens new ways to make brand integration faster, more imaginative, and naturally part of the story.
           </p>
         </div>
