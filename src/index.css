@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+
+  /* Cream background — warm beige matching PDF */
+  --color-cream:      #EDE8DC;
+  --color-cream-dark: #E4DDD0;
+
+  /* Navy — PDF heading dark blue */
+  --color-navy-50:  #EEF1F9;
+  --color-navy-100: #CDD5EE;
+  --color-navy-200: #9BAEDD;
+  --color-navy-800: #172060;
+  --color-navy-900: #0F1E52;
+
+  /* Red — PDF accent red */
+  --color-red-600: #C41230;
+  --color-red-700: #A80E28;
+
+  /* Teal — 182 metric card icon */
+  --color-teal-500: #14B8A6;
+
+  /* Green — sparkle stars + connect icon */
+  --color-green-500: #22C55E;
+  --color-green-600: #16A34A;
+
+  /* Yellow-gold — bottom callout border */
+  --color-yellow-400: #FACC15;
+}
+
+/* ─── Base reset ─── */
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background-color: var(--color-cream);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root { overflow-x: hidden; }
+
+/* ─── Scroll-entrance animations ─── */
+.fade-up {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.fade-up-delay-1 { transition-delay: 0.08s; }
+.fade-up-delay-2 { transition-delay: 0.16s; }
+.fade-up-delay-3 { transition-delay: 0.24s; }
+.fade-up-delay-4 { transition-delay: 0.34s; }
+
+/* ─── Dotted grid decoration ─── */
+.dot-grid {
+  background-image: radial-gradient(circle, #0F1E5228 1.5px, transparent 1.5px);
+  background-size: 16px 16px;
+}
+
+
+/* ─── Watch button hover lift ─── */
+.watch-btn,
+.watch-btn-navy {
+  transition: transform 0.16s ease, box-shadow 0.16s ease;
+}
+.watch-btn:hover      { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(196,18,48,0.35); }
+.watch-btn:active     { transform: scale(0.97); }
+.watch-btn-navy:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(15,30,82,0.35); }
+.watch-btn-navy:active{ transform: scale(0.97); }
