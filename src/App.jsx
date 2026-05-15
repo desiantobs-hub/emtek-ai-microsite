@@ -424,12 +424,12 @@ export default function App() {
 
         <TopBadge />
 
-        <div className="fade-up text-left mb-5">
-          <h2 className="text-[2.2rem] font-black leading-tight tracking-tight">
-            <span className="text-navy-900">Behind the Workflow:</span><br />
-            <span className="text-red-600">VidioGen</span>
+        <div className="fade-up mx-auto mb-8 max-w-[460px] text-center">
+          <h2 className="text-center text-4xl font-extrabold leading-tight text-navy-900 sm:text-5xl">
+            Behind the Workflow:<br />
+            <span className="block text-red-600">VidioGen</span>
           </h2>
-          <p className="text-navy-900 text-sm mt-3 leading-relaxed font-medium">
+          <p className="mx-auto mt-4 max-w-[440px] text-center text-base leading-relaxed text-navy-900">
             A glimpse into Emtek's internal AI video creation platform supporting the production journey behind New Keluarga Somat.
           </p>
         </div>
