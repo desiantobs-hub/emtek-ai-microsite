@@ -206,9 +206,8 @@ export default function App() {
         {/* Headline */}
         <div className="fade-up text-center mb-5">
           <h1 className="text-[2.5rem] leading-[1.1] font-black tracking-tight">
-            <span className="text-navy-900">What Happens</span><br />
-            <span className="text-red-600">When Local IP</span><br />
-            <span className="text-navy-900">Meets AI?</span>
+            <span className="text-navy-900">Emtek Media</span><br />
+            <span className="text-red-600">AI Initiatives</span>
           </h1>
         </div>
 
@@ -267,15 +266,6 @@ export default function App() {
 
         <DecoCircle className="w-28 h-28 -top-8 -right-12 opacity-70" />
         <div className="dot-grid absolute top-6 left-0 w-20 h-20 opacity-40 pointer-events-none" aria-hidden="true" />
-
-        {/* NKS logo small */}
-        <div className="mx-auto mt-2 mb-6 flex justify-center">
-          <img
-            src="/assets/nks-logo.png"
-            alt="New Keluarga Somat logo"
-            className="mx-auto h-auto w-[130px] max-w-[40vw] object-contain sm:w-[150px] md:w-[170px]"
-          />
-        </div>
 
         <div className="fade-up text-center mb-6">
           <h2 className="text-[2.2rem] font-black leading-tight tracking-tight">
@@ -342,15 +332,6 @@ export default function App() {
 
         <DecoCircle className="w-24 h-24 -top-6 -right-10 opacity-70" />
         <div className="dot-grid absolute top-6 left-2 w-20 h-20 opacity-40 pointer-events-none" aria-hidden="true" />
-
-        {/* NKS logo */}
-        <div className="mx-auto mt-2 mb-6 flex justify-center">
-          <img
-            src="/assets/nks-logo.png"
-            alt="New Keluarga Somat logo"
-            className="mx-auto h-auto w-[130px] max-w-[40vw] object-contain sm:w-[150px] md:w-[170px]"
-          />
-        </div>
 
         <div className="fade-up text-center mb-6">
           <h2 className="text-[2.2rem] font-black leading-tight tracking-tight">
@@ -501,11 +482,6 @@ export default function App() {
         <DecoCircle className="w-28 h-28 -top-8 -right-12 opacity-70" />
         <div className="dot-grid absolute top-6 left-0 w-20 h-20 opacity-40 pointer-events-none" aria-hidden="true" />
 
-        {/* NKS logo center */}
-        <div className="mx-auto mt-2 mb-6 flex justify-center">
-          <img src="/assets/nks-logo.png" alt="New Keluarga Somat logo" className="mx-auto h-auto w-[130px] max-w-[40vw] object-contain sm:w-[150px] md:w-[170px]" />
-        </div>
-
         <div className="fade-up text-center mb-6 relative">
           <Star className="absolute left-4 top-8 w-4 h-4" />
           <Star className="absolute right-4 top-4 w-3 h-3" />
@@ -554,12 +530,7 @@ export default function App() {
           FOOTER (navy solid)
       ══════════════════════════════ */}
       <footer className="bg-navy-900 text-center px-5 py-6" role="contentinfo">
-        <img
-          src="/assets/nks-logo.png"
-          alt="New Keluarga Somat"
-          className="w-14 h-14 object-contain mx-auto mb-3 rounded-xl"
-        />
-        <p className="text-navy-200 text-xs">Emtek AI Initiative · 2026</p>
+        <p className="text-navy-200 text-xs">Emtek Media AI Initiatives · 2026</p>
         <p className="text-navy-200/50 text-[10px] mt-1">New Keluarga Somat — AI-assisted local animation</p>
         {/* dot grid decoration */}
         <div className="flex flex-wrap gap-1 justify-center mt-4 opacity-20" aria-hidden="true">
