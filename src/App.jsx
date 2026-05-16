@@ -119,8 +119,55 @@ function EpisodeCard({ image, label, title, description, url, delay = '' }) {
   )
 }
 
-/* ─── Brand card (horizontal: logo left, text+button right, colored border) ─── */
-function BrandCard({ logo, logoAlt, title, description, url, borderColor = 'border-navy-900', titleColor = 'text-navy-900', delay = '' }) {
+/* ─── Brand card ───
+   Without brandFamily → horizontal (logo left, text right)
+   With brandFamily    → stacked (logo, chips, text, button)
+─── */
+function BrandCard({ logo, logoAlt, title, description, url, borderColor = 'border-navy-900', titleColor = 'text-navy-900', brandFamily, delay = '' }) {
+
+  /* Stacked variant — used when brandFamily chips are present */
+  if (brandFamily) {
+    return (
+      <div className={`fade-up ${delay} bg-white rounded-2xl border-2 ${borderColor} p-5`}>
+        {/* Main logo */}
+        <div className="flex justify-center mb-4">
+          <img src={logo} alt={logoAlt} className="h-14 max-w-[140px] object-contain" />
+        </div>
+
+        {/* Brand family chips */}
+        <div className="mb-4">
+          <p className="text-xs font-bold uppercase tracking-wide text-slate-400 mb-2">
+            Featured Brand Family
+          </p>
+          <div className="flex flex-wrap items-center gap-2">
+            {brandFamily.map(({ src, alt }) => (
+              <div
+                key={alt}
+                className="flex h-12 w-20 items-center justify-center rounded-xl bg-[#FAF7F0] px-2 shadow-sm ring-1 ring-slate-200"
+              >
+                <img src={src} alt={alt} className="max-h-8 max-w-full object-contain" />
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Text + button */}
+        <h3 className={`${titleColor} text-base font-black mb-0.5`}>{title}</h3>
+        <p className="text-gray-500 text-xs mb-3 leading-snug">{description}</p>
+        <a
+          href={url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="watch-btn inline-flex w-full items-center justify-center gap-1.5 bg-red-600 hover:bg-red-700 text-white font-bold px-4 py-2.5 rounded-full text-xs"
+        >
+          <PlayIcon /> Watch on Vidio
+        </a>
+        <p className="text-gray-400 text-[10px] mt-1.5 break-all">{url.replace('https://', '')}</p>
+      </div>
+    )
+  }
+
+  /* Default horizontal variant */
   return (
     <div className={`fade-up ${delay} bg-white rounded-2xl border-2 ${borderColor} flex items-center gap-4 px-4 py-5`}>
       <div className="shrink-0 w-24 h-16 flex items-center justify-center">
@@ -451,6 +498,11 @@ export default function App() {
             description="Kapal Api built-in showcase"
             url="https://www.vidio.com/watch/9404013-kapal-api-delbis-built-in-new-keluarga-somat"
             borderColor="border-red-600"
+            brandFamily={[
+              { src: '/assets/delbis-logo.jpeg', alt: 'Delbis' },
+              { src: '/assets/lovy-logo.jpeg',   alt: 'Lovy'   },
+              { src: '/assets/oatbits-logo.png',  alt: 'Oatbits' },
+            ]}
             delay="fade-up-delay-1"
           />
           <BrandCard
