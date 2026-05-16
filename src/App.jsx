@@ -496,7 +496,7 @@ export default function App() {
             url="https://www.vidio.com/watch/9404013-kapal-api-delbis-built-in-new-keluarga-somat"
             borderColor="border-red-600"
             brandFamily={[
-              { src: '/assets/delbis-logo.jpeg', alt: 'Delbis',  imgClass: 'max-h-10 max-w-full object-contain' },
+              { src: '/assets/delbis-logo.jpeg', alt: 'Delbis',  imgClass: 'max-h-12 max-w-full object-contain' },
               { src: '/assets/lovy-logo.png',    alt: 'Lovy',    imgClass: 'max-h-8  max-w-full object-contain' },
               { src: '/assets/oatbits-logo.png', alt: 'Oatbits', imgClass: 'max-h-8  max-w-full object-contain' },
             ]}
@@ -510,7 +510,7 @@ export default function App() {
             borderColor="border-navy-900"
             brandFamily={[
               { src: '/assets/sarimi-logo.png',    alt: 'Sarimi',    imgClass: 'max-h-8 max-w-full object-contain' },
-              { src: '/assets/sosis-eat-logo.jpg', alt: 'Sosis-Eat', imgClass: 'max-h-9 max-w-full object-contain' },
+              { src: '/assets/sosis-eat-logo.jpg', alt: 'Sosis-Eat', imgClass: 'max-h-11 max-w-full object-contain' },
             ]}
             delay="fade-up-delay-2"
           />
