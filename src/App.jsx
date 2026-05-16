@@ -463,7 +463,6 @@ export default function App() {
           >
             <PlayIcon /> Watch VidioGen Demo on Vidio
           </a>
-          <p className="text-gray-400 text-[11px] mt-2">vidio.com/watch/9403925-vidiogen-demo</p>
         </div>
 
 
