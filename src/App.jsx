@@ -510,7 +510,7 @@ export default function App() {
             borderColor="border-navy-900"
             brandFamily={[
               { src: '/assets/sarimi-logo.png',    alt: 'Sarimi',    imgClass: 'max-h-8 max-w-full object-contain' },
-              { src: '/assets/sosis-eat-logo.jpg', alt: 'Sosis-Eat', imgClass: 'max-h-[52px] max-w-full object-contain' },
+              { src: '/assets/sosis-eat-logo.jpg', alt: 'Sosis-Eat', imgClass: 'h-full w-full object-contain' },
             ]}
             delay="fade-up-delay-2"
           />
