@@ -64,29 +64,6 @@ function CityRight() {
   )
 }
 
-/* ─── Navy curved footer bar (bottom of sections) ─── */
-function NavyFooterBar() {
-  return (
-    <div className="relative w-full mt-6 overflow-hidden pointer-events-none" aria-hidden="true">
-      {/* wave curve */}
-      <svg viewBox="0 0 390 80" xmlns="http://www.w3.org/2000/svg" className="w-full block">
-        <path d="M0,80 L0,40 Q195,0 390,40 L390,80 Z" fill="#0F1E52" />
-      </svg>
-      {/* red arc accent */}
-      <div className="absolute bottom-0 right-0 w-24 h-16">
-        <svg viewBox="0 0 100 70" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
-          <path d="M100,70 Q40,0 0,30" stroke="#C41230" strokeWidth="4" fill="none" strokeLinecap="round" />
-        </svg>
-      </div>
-      {/* dot grid in footer dark area */}
-      <div className="absolute bottom-0 left-4 flex gap-1 flex-wrap w-20 h-10 overflow-hidden">
-        {Array.from({ length: 20 }).map((_, i) => (
-          <div key={i} className="w-1 h-1 rounded-full bg-white opacity-20" />
-        ))}
-      </div>
-    </div>
-  )
-}
 
 /* ─── Metric card (horizontal: icon left, text right) ─── */
 function MetricCard({ icon, iconBg, headline, value, valueSub, valueColor = 'text-green-600', sub, delay = '' }) {
@@ -280,7 +257,7 @@ export default function App() {
           </div>
         </div>
 
-        <NavyFooterBar />
+
       </Section>
 
       {/* ══════════════════════════════
@@ -290,8 +267,6 @@ export default function App() {
 
         <DecoCircle className="w-28 h-28 -top-8 -right-12 opacity-70" />
         <div className="dot-grid absolute top-6 left-0 w-20 h-20 opacity-40 pointer-events-none" aria-hidden="true" />
-
-        <TopBadge />
 
         {/* NKS logo small */}
         <div className="mx-auto mt-2 mb-6 flex justify-center">
@@ -357,7 +332,7 @@ export default function App() {
           </p>
         </div>
 
-        <NavyFooterBar />
+
       </Section>
 
       {/* ══════════════════════════════
@@ -367,8 +342,6 @@ export default function App() {
 
         <DecoCircle className="w-24 h-24 -top-6 -right-10 opacity-70" />
         <div className="dot-grid absolute top-6 left-2 w-20 h-20 opacity-40 pointer-events-none" aria-hidden="true" />
-
-        <TopBadge />
 
         {/* NKS logo */}
         <div className="mx-auto mt-2 mb-6 flex justify-center">
@@ -412,7 +385,7 @@ export default function App() {
           />
         </div>
 
-        <NavyFooterBar />
+
       </Section>
 
       {/* ══════════════════════════════
@@ -421,8 +394,6 @@ export default function App() {
       <Section id="vidiogen" ariaLabel="VidioGen — Behind the Workflow">
 
         <DecoCircle className="w-24 h-24 -top-6 -right-10 opacity-70" />
-
-        <TopBadge />
 
         <div className="fade-up mx-auto mb-8 max-w-[460px] text-center">
           <h2 className="text-center text-4xl font-extrabold leading-tight text-navy-900 sm:text-5xl">
@@ -469,7 +440,7 @@ export default function App() {
           <p className="text-gray-400 text-[11px] mt-2">vidio.com/watch/9403925-vidiogen-demo</p>
         </div>
 
-        <NavyFooterBar />
+
       </Section>
 
       {/* ══════════════════════════════
@@ -479,8 +450,6 @@ export default function App() {
 
         <DecoCircle className="w-28 h-28 -top-8 -right-12 opacity-70" />
         <div className="dot-grid absolute top-6 left-0 w-20 h-20 opacity-40 pointer-events-none" aria-hidden="true" />
-
-        <TopBadge />
 
         <div className="fade-up mx-auto mb-8 max-w-[420px] text-center">
           <h2 className="text-4xl font-extrabold leading-tight text-navy-900 sm:text-5xl">
@@ -521,7 +490,7 @@ export default function App() {
           <p className="text-yellow-400 text-sm font-bold mt-0.5">Story-driven brand moments.</p>
         </div>
 
-        <NavyFooterBar />
+
       </Section>
 
       {/* ══════════════════════════════
@@ -531,8 +500,6 @@ export default function App() {
 
         <DecoCircle className="w-28 h-28 -top-8 -right-12 opacity-70" />
         <div className="dot-grid absolute top-6 left-0 w-20 h-20 opacity-40 pointer-events-none" aria-hidden="true" />
-
-        <TopBadge />
 
         {/* NKS logo center */}
         <div className="mx-auto mt-2 mb-6 flex justify-center">
@@ -580,7 +547,7 @@ export default function App() {
           </p>
         </div>
 
-        <NavyFooterBar />
+
       </Section>
 
       {/* ══════════════════════════════
