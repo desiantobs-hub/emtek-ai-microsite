@@ -123,7 +123,7 @@ function EpisodeCard({ image, label, title, description, url, delay = '' }) {
    Without brandFamily → horizontal (logo left, text right)
    With brandFamily    → stacked (logo, chips, text, button)
 ─── */
-function BrandCard({ logo, logoAlt, title, description, url, borderColor = 'border-navy-900', titleColor = 'text-navy-900', brandFamily, delay = '' }) {
+function BrandCard({ logo, logoAlt, title, description, url, borderColor = 'border-navy-900', titleColor = 'text-navy-900', brandFamily, logoClass, delay = '' }) {
 
   /* Stacked variant — used when brandFamily chips are present */
   if (brandFamily) {
@@ -131,7 +131,7 @@ function BrandCard({ logo, logoAlt, title, description, url, borderColor = 'bord
       <div className={`fade-up ${delay} bg-white rounded-2xl border-2 ${borderColor} p-5`}>
         {/* Main logo — large, centered */}
         <div className="flex justify-center mb-5">
-          <img src={logo} alt={logoAlt} className="h-auto w-[110px] object-contain sm:w-[130px] md:w-[150px]" />
+          <img src={logo} alt={logoAlt} className={logoClass ?? 'h-auto w-[110px] object-contain sm:w-[130px] md:w-[150px]'} />
         </div>
 
         {/* Brand family chips — centered */}
@@ -505,11 +505,13 @@ export default function App() {
           <BrandCard
             logo="/assets/indofood-logo.png"
             logoAlt="Indofood brand logo"
-            title="Indofood"
-            titleColor="text-navy-900"
-            description="Indofood built-in showcase"
+            logoClass="mx-auto h-auto w-[140px] object-contain sm:w-[160px] md:w-[180px]"
             url="https://www.vidio.com/watch/9404012-indofood-sarimi-built-in-new-keluarga-somat"
             borderColor="border-navy-900"
+            brandFamily={[
+              { src: '/assets/sarimi-logo.png',    alt: 'Sarimi',    imgClass: 'max-h-8 max-w-full object-contain' },
+              { src: '/assets/sosis-eat-logo.jpg', alt: 'Sosis-Eat', imgClass: 'max-h-9 max-w-full object-contain' },
+            ]}
             delay="fade-up-delay-2"
           />
         </div>
