@@ -30,7 +30,7 @@ function TopBadge() {
   return (
     <div className="flex justify-center mb-5">
       <span className="inline-flex items-center border-2 border-navy-900 text-navy-900 text-[11px] font-extrabold px-5 py-1.5 rounded-full tracking-[0.18em] uppercase bg-white">
-        Emtek AI Initiative
+        Emtek Media AI Initiative
       </span>
     </div>
   )
@@ -250,8 +250,9 @@ export default function App() {
         {/* Headline */}
         <div className="fade-up text-center mb-5">
           <h1 className="text-[2.5rem] leading-[1.1] font-black tracking-tight">
-            <span className="text-navy-900">Emtek Media</span><br />
-            <span className="text-red-600">AI Initiatives</span>
+            <span className="text-navy-900">What Happens</span><br />
+            <span className="text-red-600">When Local IP</span><br />
+            <span className="text-navy-900">Meets AI?</span>
           </h1>
         </div>
 
