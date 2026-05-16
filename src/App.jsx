@@ -131,7 +131,7 @@ function BrandCard({ logo, logoAlt, title, description, url, borderColor = 'bord
       <div className={`fade-up ${delay} bg-white rounded-2xl border-2 ${borderColor} p-5`}>
         {/* Main logo */}
         <div className="flex justify-center mb-4">
-          <img src={logo} alt={logoAlt} className="h-14 max-w-[140px] object-contain" />
+          <img src={logo} alt={logoAlt} className="h-auto w-[110px] object-contain sm:w-[130px] md:w-[150px]" />
         </div>
 
         {/* Brand family chips */}
@@ -500,7 +500,7 @@ export default function App() {
             borderColor="border-red-600"
             brandFamily={[
               { src: '/assets/delbis-logo.jpeg', alt: 'Delbis' },
-              { src: '/assets/lovy-logo.jpeg',   alt: 'Lovy'   },
+              { src: '/assets/lovy-logo.png',    alt: 'Lovy'   },
               { src: '/assets/oatbits-logo.png',  alt: 'Oatbits' },
             ]}
             delay="fade-up-delay-1"
