@@ -129,31 +129,29 @@ function BrandCard({ logo, logoAlt, title, description, url, borderColor = 'bord
   if (brandFamily) {
     return (
       <div className={`fade-up ${delay} bg-white rounded-2xl border-2 ${borderColor} p-5`}>
-        {/* Main logo */}
-        <div className="flex justify-center mb-4">
+        {/* Main logo — large, centered */}
+        <div className="flex justify-center mb-5">
           <img src={logo} alt={logoAlt} className="h-auto w-[110px] object-contain sm:w-[130px] md:w-[150px]" />
         </div>
 
-        {/* Brand family chips */}
-        <div className="mb-4">
-          <p className="text-xs font-bold uppercase tracking-wide text-slate-400 mb-2">
+        {/* Brand family chips — centered */}
+        <div className="mb-5 text-center">
+          <p className="text-xs font-bold uppercase tracking-wide text-slate-400 mb-3">
             Featured Brand Family
           </p>
-          <div className="flex flex-wrap items-center gap-2">
-            {brandFamily.map(({ src, alt }) => (
+          <div className="flex flex-wrap justify-center items-center gap-2">
+            {brandFamily.map(({ src, alt, imgClass = 'max-h-8 max-w-full object-contain' }) => (
               <div
                 key={alt}
-                className="flex h-12 w-20 items-center justify-center rounded-xl bg-[#FAF7F0] px-2 shadow-sm ring-1 ring-slate-200"
+                className="flex h-14 w-24 items-center justify-center rounded-xl bg-white px-3 shadow-sm ring-1 ring-slate-200"
               >
-                <img src={src} alt={alt} className="max-h-8 max-w-full object-contain" />
+                <img src={src} alt={alt} className={imgClass} />
               </div>
             ))}
           </div>
         </div>
 
-        {/* Text + button */}
-        <h3 className={`${titleColor} text-base font-black mb-0.5`}>{title}</h3>
-        <p className="text-gray-500 text-xs mb-3 leading-snug">{description}</p>
+        {/* Button only — title/description/URL removed */}
         <a
           href={url}
           target="_blank"
@@ -162,7 +160,6 @@ function BrandCard({ logo, logoAlt, title, description, url, borderColor = 'bord
         >
           <PlayIcon /> Watch on Vidio
         </a>
-        <p className="text-gray-400 text-[10px] mt-1.5 break-all">{url.replace('https://', '')}</p>
       </div>
     )
   }
@@ -499,9 +496,9 @@ export default function App() {
             url="https://www.vidio.com/watch/9404013-kapal-api-delbis-built-in-new-keluarga-somat"
             borderColor="border-red-600"
             brandFamily={[
-              { src: '/assets/delbis-logo.jpeg', alt: 'Delbis' },
-              { src: '/assets/lovy-logo.png',    alt: 'Lovy'   },
-              { src: '/assets/oatbits-logo.png',  alt: 'Oatbits' },
+              { src: '/assets/delbis-logo.jpeg', alt: 'Delbis',  imgClass: 'max-h-10 max-w-full object-contain' },
+              { src: '/assets/lovy-logo.png',    alt: 'Lovy',    imgClass: 'max-h-8  max-w-full object-contain' },
+              { src: '/assets/oatbits-logo.png', alt: 'Oatbits', imgClass: 'max-h-8  max-w-full object-contain' },
             ]}
             delay="fade-up-delay-1"
           />
